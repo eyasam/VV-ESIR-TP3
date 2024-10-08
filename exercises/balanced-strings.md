@@ -63,7 +63,7 @@ Test that simple balanced symbols (parentheses, brackets, braces) are recognized
 - `testBalancedMultipleSymbols()`:
 Test that multiple nested balanced symbols are correctly recognized.
 
--`testUnmatchedOpeningSymbols()` and `testUnmatchedClosingSymbols()`:
+- `testUnmatchedOpeningSymbols()` and `testUnmatchedClosingSymbols()`:
 These tests cover cases where there's a mismatch between opening and closing symbols.
 
 - `testMismatchedSymbols()`:
@@ -82,9 +82,8 @@ This predicate checks **three separate conditions** using both **&&** and **||**
 
 Example for Condition: `ch == ')' && sommet != '('`
 - Covered by the test case `testMismatchedSymbols()`:
-    ```java
-    assertFalse(isBalanced("([)]"));
-    ```
+    ```assertFalse(isBalanced("([)]"));```
+  
 4- We used PIT to generate 20 mutations, all of which were killed, resulting in **100% mutation coverage**. There are no live mutants, indicating that our test cases effectively detect all introduced changes.
 
 The line coverage is **92%** (12/13 lines covered), meaning one line is not triggered by the current tests.
