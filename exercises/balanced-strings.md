@@ -78,12 +78,32 @@ if ((ch == ')' && sommet != '(') || (ch == '}' && sommet != '{') || (ch == ']' &
     return false;
 }
 ```
-This predicate checks **three separate conditions** using both **&&** and **||** operators. To satisfy Base Choice Coverage, each of these conditions needs to be evaluated individually in different test cases. However, we have already focused on them in the test cases.
+This predicate checks **three separate conditions** using both **&&** and **||** operators. To satisfy Base Choice Coverage, each of these conditions needs to be evaluated individually in different test cases.
 
-Example for Condition: `ch == ')' && sommet != '('`
-- Covered by the test case `testMismatchedSymbols()`:
-    ```assertFalse(isBalanced("([)]"));```
+However, we have already focused on them in the test
+
+- **Condition 1: ch == ')' && top != '('** (testUnmatchedClosingSymbols()) :
   
+True: When ch is ')' and the top of the stack is not '('.
+
+False: When ch is not ')' or the top of the stack is '('.
+
+- **Condition 2: ch == '}' && top != '{'** (testUnmatchedClosingSymbols()) :
+
+True: When ch is '}' and the top of the stack is not '{'.
+
+False: When ch is not '}' or the top of the stack is '{'.
+
+- **Condition 3: ch == ']' && top != '['**
+(testUnmatchedClosingSymbols()) :
+
+True: When ch is ']' and the top of the stack is not '['
+
+False: When ch is not ']' or the top of the stack is '['.
+
+After evaluating the test cases based on the conditions in the isBalanced method, we found that each condition within the boolean expression has been covered with true and false cases.
+This satisfies Base Choice Coverage for the isBalanced method.
+
 4- We used PIT to generate 20 mutations, all of which were killed, resulting in **100% mutation coverage**. There are no live mutants, indicating that our test cases effectively detect all introduced changes.
 
 The line coverage is **92%** (12/13 lines covered), meaning one line is not triggered by the current tests.
