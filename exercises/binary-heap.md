@@ -42,7 +42,7 @@ Use the project in [tp3-heap](../code/tp3-heap) to complete this exercise.
 
 1- Input Space Partitioning Table 
 
-| Method        | Characteristics                                                                                          |
+| Method        | Partitioning blocks                                                                                          |
 |---------------|------------------------------------------------------------------------------------------|
 | **pop()**     | Non-empty heap                      |
 |               | Empty heap                                                                              |
