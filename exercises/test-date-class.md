@@ -123,11 +123,8 @@ By adding these two new asserts, we ensure that all paths of the boolean logic i
 
 4- After running the PIT mutation testing tool on the Date class test suite, we obtained the following statistics:
 
-<img width="599" alt="gh" src="https://github.com/user-attachments/assets/d257c914-1e88-4598-9700-e9a7e2bef140">
+<img width="604" alt="Capture d'écran 2024-10-10 223841" src="https://github.com/user-attachments/assets/e918f539-142a-4e87-be42-5e505aacf01b">
 
 - **Line Coverage**: Achieving 100% line coverage indicates that every line of code in the Date class was executed during the tests. This is **a strong indicator** that our test cases are thorough in terms of execution.
 
-- **Mutation Score**: The mutation score of 86% signifies that the test suite was able to detect 86% of the mutations in the code. Which is is **a good score** suggesting that the majority of logical paths were effectively tested.
-
-
-
+- **Mutation Score**: The mutation score of 88% signifies that the test suite was able to detect 88% of the mutations in the code. Which is is **a good score** suggesting that the majority of logical paths were effectively tested.
