@@ -12,11 +12,10 @@ Answer the following questions:
 
 ## Answer
 
-1. The assertion assertTrue(3 * 0.4 == 1.2) fails due to **floating-point precision errors**. Since floating-point numbers are stored in binary, certain decimal values, like 0.4, cannot be represented exactly. As a result, calculations such as 3 * 0.4 may yield a result slightly different from 1.2, like 1.2000000000000002, causing the assertion to fail.
+1. The assertion assertTrue(3 * 0.4 == 1.2) fails due to **floating-point precision errors**. Since floating-point numbers are stored in binary, certain decimal values, like 0.4, cannot be represented exactly. As a result, calculations such as 3 * 0.4 may yield a result slightly different from 1.2, like 1.20000000002, causing the assertion to fail.
 When comparing floating-point numbers, it's better **to check if they are approximately equal within a small tolerance (epsilon)** rather than expecting exact equality.
 
-2.
-assertEquals and assertSame are two methods **used to compare values**, but :
+2. assertEquals and assertSame are two methods **used to compare values**, but :
 - assertEquals: Compares the **values** of two objects. It checks whether two objects are equivalent.
 - assertSame: Compares the **references** of two objects. It checks whether two references point to the exact same object.
   
@@ -75,8 +74,7 @@ public void testCondition() {
 }
 
 ```
-4.
-In JUnit 4, exceptions were handled using the `@Test()` annotation, but this approach had limitations:
+4. In JUnit 4, exceptions were handled using the `@Test()` annotation, but this approach had limitations:
 - It only checked if an exception was thrown anywhere in the test, without specifying where.
 - It allowed testing for only one exception per test method, making it harder to handle multiple cases.
 
