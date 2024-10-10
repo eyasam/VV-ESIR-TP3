@@ -39,7 +39,7 @@ public class GuavaTestlibTest {
 
     public static Test suite() {
         TestSuite suite = new TestSuite();
-        suite.addTest(new SomeTest());  // Manually adding tests
+        suite.addTest(new SomeTest());  
         return suite;
     }
 }
@@ -56,9 +56,7 @@ Here’s how to refactor the `GuavaTestlibTest.java` file using the modern JUnit
     SomeTest.class,
     AnotherTest.class
 })
-public class GuavaTestlibTest {
-    // No need for the suite() method anymore
-}
+public class GuavaTestlibTest {}
 ```
 
 In conclusion, by using JUnit 4's suite annotations, we modernize the test suite, improve readability, and make future maintenance of the test code simpler.
