@@ -42,17 +42,17 @@ Use the project in [tp3-heap](../code/tp3-heap) to complete this exercise.
 
 1- Input Space Partitioning Table 
 
-| Method        | Characteristics                      | Description                                                                                 |
-|---------------|--------------------------------------|---------------------------------------------------------------------------------------------|
-| **pop()**     | Non-empty heap                       | Returns and removes the minimum element, maintaining the heap property.                    |
-|               | Empty heap                           | Throws `NoSuchElementException`.                                                            |
-| **peek()**    | Non-empty heap                       | Returns the minimum element without removing it, ensuring the heap structure remains unchanged. |
-|               | Empty heap                           | Throws `NoSuchElementException`.                                                            |
-| **push(T)**   | Valid value (positive and negative) | Adds the given element to the heap, ensuring that the heap property is maintained.         |
-|               | Duplicate element                    | Correctly handles duplicates and maintains the heap property.                               |
-|               | Multiple elements                    | Efficiently adds multiple elements to the heap. |
-| **count()**   | Empty heap                  | Returns 0, confirming the absence of elements.                               |
-|               |  Non-empty heap                                    | Returns the correct count of elements, reflecting the current size of the heap. |
+| Method        | Characteristics                                                                                          |
+|---------------|------------------------------------------------------------------------------------------|
+| **pop()**     | Non-empty heap                      |
+|               | Empty heap                                                                              |
+| **peek()**    | Non-empty heap                       |
+|               | Empty heap                            |
+| **push(T)**   | Valid value (positive and negative)       |
+|               | Duplicate element             |
+|               | Multiple elements               |
+| **count()**   | Empty heap                                            |
+|               |  Non-empty heap                                    |
 
 **Common Characteristics :**
 
