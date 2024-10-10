@@ -35,7 +35,7 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
 
 Based on these characteristics, we defined the following partition blocks to cover all possible scenarios of balanced and unbalanced strings:
 
-| Partition Block                                   | Examples                                           |
+| Partition Block                                   |                                            |
 |--------------------------------------------------|------------------|
 | Empty string without symbols| `""`, `"abc"`                                              |
 | **Balanced strings**|                                                    |                  |
