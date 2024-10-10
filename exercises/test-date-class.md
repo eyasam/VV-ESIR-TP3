@@ -54,7 +54,7 @@ Use the project in [tp3-date](../code/tp3-date) to complete this exercise.
 ## Answer
 1- Test Design Using Input Space Partitioning
 
-| **Method**               | **Characteristics**                                                              | **Blocks / Partitions**                                                                                          |
+| **Method**               | **Characteristics**                                                              | **Partitioning blocks**                                                                                          |
 |--------------------------|----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | `isValidDate`            | - Valid/Invalid Day<br> - Valid/Invalid Month<br> - Valid/Invalid Year<br> - Leap/Non-leap Year | - Day within month limits <br> - Day out of bounds <br> - Invalid month <br> - Invalid leap year date  |
 | `isLeapYear`             | - Divisible by 4<br> - Divisible by 100<br> - Divisible by 400                    | - Leap year (`2020`)<br> - Non-leap year (`2019`)<br> - Divisible by 400 (leap year) (`2000`)<br> - Divisible by 100 but not leap year (`1900`)                  |
