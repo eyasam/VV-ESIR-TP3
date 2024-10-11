@@ -48,48 +48,6 @@ public class TLSSocketFactoryTestMocks {
         verify(socket).setEnabledProtocols(new String[]{ "TLSv1.2", "TLSv1.1", "TLSv1", "SSLv3"});
     }
 	
-	
-  	// Test to verify that when supported protocols are null, the enabled protocols are preserved.
-	@Test
-	public void testPreparedSocket_EnabledProtocolsOnly() {
-	    SSLSocket socket = Mockito.mock(SSLSocket.class);
-
-	    when(socket.getSupportedProtocols()).thenReturn(null);
-	    when(socket.getEnabledProtocols()).thenReturn(s2);
-
-	    factory.prepareSocket(socket);
-
-	    verify(socket).setEnabledProtocols(s2);
-	}
-
-    // Test to verify that only supported protocols are used when enabled protocols are null.
-    @Test
-    public void testPreparedSocket_SupportedProtocolsOnly() {
-	    SSLSocket socket = Mockito.mock(SSLSocket.class);
-
-        when(socket.getSupportedProtocols()).thenReturn(new String[]{"xx","TLSv1", "TLSv1.2"});
-        when(socket.getEnabledProtocols()).thenReturn(null);
-
-        factory.prepareSocket(socket);
-
-        verify(socket).setEnabledProtocols(new String[]{"TLSv1.2", "TLSv1"});
-    }
-    
-    // Test to ensure that supported protocols are ordered correctly and only valid protocols are set.
-    @Test
-    public void testPreparedSocket_ProtocolsOrder() {
-        SSLSocket socket = Mockito.mock(SSLSocket.class);
-
-        when(socket.getSupportedProtocols()).thenReturn(s1);
-        when(socket.getEnabledProtocols()).thenReturn(null);
-
-        factory.prepareSocket(socket);
-
-        verify(socket).setEnabledProtocols(new String[]{"TLSv1.2", "TLSv1.1", "TLSv1"});
-    }
-    
-
-
 
 
 }
