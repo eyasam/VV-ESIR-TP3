@@ -35,17 +35,17 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
 
 Based on these characteristics, we defined the following partition blocks to cover all possible scenarios of balanced and unbalanced strings:
 
-| Partition Block                                   |                                            |
-|--------------------------------------------------|------------------|
-| Empty string without symbols| `""`, `"abc"`                                              |
-| **Balanced strings**|                                                    |                  |
-| String with a single type of symbol | `"()"`, `"[]"`, `"{}"`                                  |
-| String with multiple types of symbols (nested balanced) | `"{[()]}"`, `"{{[]}}"`, `"{()}"`                        |
-| String containing mixed characters and symbols     | `"{abc[def](ghi)}"`                                       |
-| **Unbalanced strings**  |                                                                 |
-| Opening without closing | `"("`, `"[["`, `"{}{"`                   |
-| Closing without opening | `"}"`, `"))"`, `"][]"`               |
-| Mixed symbols and characters | `"{[(])}"`, `"{[}]}"`, `"([)]"`, `"{abc[def}(ghi)]"`, `"{(text)[]}"`             |
+| Block | Partition Block                                   | Input Example(s) |
+|-------|--------------------------------------------------|------------------|
+| 1     | **Empty string without symbols**                | `""`, `"abc"`    |
+| 2     | **Balanced strings**                            |                  |
+|   | String with a single type of symbol             | `"()"`, `"[]"`, `"{}"` |
+|   | String with multiple types of symbols (nested balanced) | `"{[()]}"`, `"{{[]}}"`, `"{()}"` |
+|   | String containing mixed characters and symbols  | `"{abc[def](ghi)}"` |
+| 3     | **Unbalanced strings**                          |                  |
+|   | Opening without closing                         | `"("`, `"[["`, `"{}{"` |
+|  | Closing without opening                         | `"}"`, `"))"`, `"][]"` |
+|   | Mixed symbols and characters                    | `"{[(])}"`, `"{[}]}"`, `"([)]"`, `"{abc[def}(ghi)]"`, `"{(text)[]}"` |
 
 2- After writing the isBalanced() method, we created initial test cases. During coverage evaluation, we found that certain conditions were not fully covered, particularly when the stack was empty. To increase coverage, we added new test cases to address these scenarios.
 
